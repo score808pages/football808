@@ -88,15 +88,15 @@ JOIN
 </div>
 </div></div>
 <div class='tabs-container'>
-      <button class='tab-button active' onclick='setTab(this, &apos;news&apos;)'>Event</button>
-  <button class='tab-button' onclick='setTab(this, &apos;semua&apos;)'>Jalalive</button>
-  <button class='tab-button' onclick='setTab(this, &apos;live&apos;)'>Score</button>
+      <button class='tab-button' onclick='setTab(this, &apos;news&apos;)'>Event</button>
+  <button class='tab-button active' onclick='setTab(this, &apos;semua&apos;)'>Jalalive</button>
+  <button class='tab-button' onclick='setTab(this, &apos;live&apos;)'>Livecore</button>
 </div>
-<div class='tab-content' id='news'>
+<div class='tab-content' id='news' style='display: none;'>
   <!-- Konten news -->
 <iframe id='score808frame' title='score808' scrolling='no' src='https://official.score808.my.id/p/matchday.html' style='width: 100%; border: none;'></iframe>
 </div>
-<div class='tab-content' id='semua' style='display: none;'>
+<div class='tab-content' id='semua'>
     <div id="live-matches" class="livecard-container">Loading matches...</div>
   <!-- Konten Semua -->
 </div>
