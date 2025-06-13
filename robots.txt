@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /search
 
 Sitemap: https://www.score808.my.id/sitemap.xml
