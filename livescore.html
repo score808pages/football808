@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Live Score Pertandingan Bola Hari Ini</title>
+<link rel="icon" href="https://www.score808.my.id/image/favicon.ico" type="image/x-icon"/>
+  <!-- SEO Meta -->
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="Score808"/>
+  <meta name="keywords" content="live score bola, skor langsung, pertandingan hari ini, streaming bola, jadwal bola"/>
+  <meta name="description" content="Cek live score pertandingan bola hari ini lengkap dengan statistik dan info pertandingan langsung."/>
+
+  <!-- Canonical URL (Dynamic via JS) -->
+  <script>
+    function slugify(text) {
+      return (text || "").toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .trim();
+    }
+
+    function getSlug() {
+      return slugify(location.hash.slice(1));
+    }
+
+    const slug = getSlug();
+    if (slug) {
+      const canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      canonical.setAttribute("href", `https://www.score808.my.id/livescore/${slug}`);
+      document.head.appendChild(canonical);
+    }
+  </script>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article"/>
+  <meta property="og:site_name" content="Score808"/>
+  <meta property="og:title" content="Live Score Pertandingan Bola Hari Ini"/>
+  <meta property="og:description" content="Live score dan info pertandingan bola terkini."/>
+  <meta property="og:image" content="https://www.score808.my.id/image/android-chrome-512x512.png"/>
+  <meta property="og:url" content="https://www.score808.my.id/livescore"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Live Score Pertandingan Bola Hari Ini"/>
+  <meta name="twitter:description" content="Live score dan info pertandingan bola terkini."/>
+  <meta name="twitter:image" content="https://www.score808.my.id/image/android-chrome-512x512.png">
+
+  <!-- JSON-LD (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Live Score Pertandingan Bola Hari Ini",
+    "description": "Cek live score pertandingan bola hari ini lengkap dengan statistik dan info pertandingan langsung.",
+    "author": { "@type": "Organization", "name": "Score808" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Score808",
+      "logo": { "@type": "ImageObject", "url": "https://www.score808.my.id/image/android-chrome-512x512.png" }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.score808.my.id/livescore"
+    }
+  }
+  </script>
+
+  <style>
+.match-article{font-family:'Segoe UI',sans-serif;padding:20px;background:#ffffff;color:#222;max-width:768px;margin:auto;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.05)}.match-header{text-align:center;margin-bottom:16px}.match-title{font-size:24px;font-weight:700;margin-bottom:4px}.match-subtitle{font-size:14px;color:#666}.match-iframe iframe{width:100%;height:300px;border-radius:8px;margin:20px 0}.match-visual{display:flex;justify-content:center;align-items:center;gap:12px;margin:16px 0}.match-visual{display:flex;justify-content:center;align-items:flex-start;gap:24px;margin:24px auto;text-align:center;flex-wrap:nowrap}.team-box{display:flex;flex-direction:column;align-items:center;min-width:90px}.team-logo{width:60px;height:auto;margin-bottom:6px}.team-namepost{font-size:14px;font-weight:600;color:#ffffff;max-width:80px;word-wrap:break-word}.vs-text{font-size:18px;font-weight:bold;align-self:center;color:#555}
+@media screen and(max-width:360px){.match-visual{gap:16px}.team-logo{width:48px}.team-namepost{font-size:13px}}.team-logo{height:50px}.vs-label{font-weight:bold;font-size:18px}
+section{margin-bottom:20px}
+section h2,section h3,section h4{font-size:18px;margin-bottom:8px;color:#111}
+section ul{padding-left:20px;margin-top:8px}.match-alternatif{background:#f3f3f3;padding:12px;border-radius:8px;text-align:center}.match-button{background:#007BFF;color:#fff;text-decoration:none;padding:10px 20px;display:inline-block;border-radius:6px;margin-top:8px;transition:background 0.3s}.match-button:hover{background:#0056b3}.match-footer{text-align:center;font-size:14px;margin-top:30px;color:#555}
+@media(max-width:600px){.match-title{font-size:20px}.team-logo{height:40px}.match-iframe iframe{height:250px}}.recent-list{list-style:none;padding:0;margin:20px 0;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0}.recent-item{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid #e2e8f0;background-color:#ffffff;transition:background 0.2s ease}.recent-item:hover{background-color:#f8fafc}.recent-item.left{flex-grow:1}.recent-item.date{font-size:14px;color:#64748b;margin-bottom:4px}.recent-item.teams{font-weight:600;font-size:16px;color:#1e293b}.recent-item.right{min-width:60px;text-align:right}.recent-item.score{font-size:16px;font-weight:bold;color:#0f172a;background-color:#e2e8f0;padding:6px 10px;border-radius:6px;display:inline-block}
+@media(max-width:600px){.recent-item{align-items:flex-start}.recent-item.right{text-align:left;margin-top:6px}.recent-item.teams{font-size:15px}.recent-item.score{font-size:14px;padding:5px 8px}}.main-footer{background-color:#1e3a8a;color:white;font-family:'Segoe UI',sans-serif;padding:30px 20px 10px}.footer-container{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;max-width:1200px;margin:0 auto}.footer-column{flex:1 1 200px}.footer-column h3,.footer-column h4{margin-bottom:10px}.footer-column ul{list-style:none;padding:0;margin:0}.footer-column ul li{margin-bottom:8px}.footer-column ul li a{color:white;text-decoration:none}.footer-column ul li a:hover{color:#93c5fd}.social-icons{display:flex;gap:10px}.social-icons a{display:inline-flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.1);border-radius:50%;width:36px;height:36px;transition:background 0.2s}.social-icons a:hover{background:#93c5fd}.social-icons svg{width:20px;height:20px;fill:white}.footer-bottom{text-align:center;padding-top:20px;font-size:0.9rem;color:#ccc;border-top:1px solid rgba(255,255,255,0.1)}
+@media(max-width:600px){.footer-container{flex-direction:column;align-items:flex-start}}.navbar{background-color:#1e3a8a;color:white;font-family:'Segoe UI',sans-serif;padding:12px 20px;position:sticky;top:0;z-index:1000;box-shadow:0 2px 6px rgba(0,0,0,0.1)}.navbar-container{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto}.logo{font-weight:bold;font-size:20px}.nav-links{display:flex;gap:20px;transition:all 0.3s ease-in-out}.nav-links a{display:flex;align-items:center;gap:6px;text-decoration:none;color:white;font-size:0.95rem}.nav-links a:hover{color:#93c5fd}.nav-links svg{width:18px;height:18px;fill:currentColor}.nav-toggle{display:none;font-size:24px;cursor:pointer}
+@media(max-width:768px){.nav-toggle{display:block}.nav-links{position:absolute;top:56px;right:0;background:#1e3a8a;flex-direction:column;width:200px;padding:12px;display:none;box-shadow:0 4px 8px rgba(0,0,0,0.1)}.nav-links.open{display:flex}}.content_container{margin:0 auto;display:grid;gap:20px}.content_item{padding:8px;background:cyan;box-sizing:border-box;border-radius:6px;border:3px solid hsl(220,24%,15%);display:flex;flex-direction:column;align-items:center}
+p.p_title{font-size:1.2em;font-family:serif;font-weight:bold;margin-top:0.2em}
+p.p_description{font-size:13px;font-family:cursive}.thumbnail_Img{width:100%;max-height:150px;object-fit:cover;border-radius:6px}.content_btn{margin-top:0.8rem;display:flex;justify-content:center;flex-wrap:wrap;gap:5px}
+a.a_btn{line-height:1.5em;display:inline-block;text-align:center;background:hsl(220,24%,12%);font-size:11px;color:white;padding:5px;border-radius:4px}
+@media screen and(max-width:767px){.content_container{grid-template-columns:1fr}.content_item{width:100%}}
+@media screen and(min-width:768px)and(max-width:1024px){.content_container{grid-template-columns:repeat(3,1fr)}}
+@media screen and(min-width:1025px){.content_container{grid-template-columns:repeat(5,1fr)}.content_item{max-width:300px}}.match-block{margin-bottom:10px;border-radius:8px;overflow:hidden;font-family:'Segoe UI',sans-serif}.league-header{background:#0b1b2a;color:#fff;font-weight:bold;padding:8px 16px;font-size:14px}.match-card{background:#162c45;color:#fff;border:.5px solid #fff;border-radius:8px;padding:10px;display:flex;justify-content:space-between;align-items:center;text-decoration:none;transition:box-shadow 0.3s ease}.telegram-sticky{position:fixed;bottom:16px;right:16px;background:#0088cc;color:white;display:none;align-items:center;gap:10px;padding:12px 16px 12px 12px;border-radius:50px;font-weight:600;font-size:15px;z-index:9999;box-shadow:0 6px 18px rgba(0,0,0,0.2);transition:all 0.3s ease}.telegram-link{display:flex;align-items:center;text-decoration:none;color:white;gap:10px}.telegram-icon{width:20px;height:20px;fill:white}.telegram-close{background:none;border:none;color:white;font-size:20px;margin-left:auto;padding-left:10px;cursor:pointer;font-weight:bold;transition:transform 0.2s ease}.telegram-close:hover{transform:scale(1.2)}.team-column{display:flex;flex-direction:column;gap:10px}.team-row{display:flex;align-items:center;gap:10px}.team-logo{width:22px;height:22px;object-fit:contain;border-radius:50%;background:#fff}.team-name{font-size:14px;white-space:nowrap}.match-time{font-size:13px;color:#fff;display:flex;align-items:center;gap:10px;font-weight:500;white-space:nowrap}.match-time.icon{width:20px;height:20px;fill:#fff;opacity:0.9}.day-divider{color:#5b7faf;font-size:12px;font-weight:bold;margin-top:3px;margin-bottom:10px;border-bottom:2px solid #ccc;padding-bottom:5px}
+#searchInput{width:100%;max-width:100%;margin:0 auto 16px auto;padding:12px 16px;font-size:16px;border:2px solid #ddd;border-radius:8px;outline:none;box-sizing:border-box;transition:border-color 0.3s ease,box-shadow 0.3s ease;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}
+#searchInput{width:100%;max-width:680px;margin:0 auto;padding:12px 16px;margin-bottom:15px;font-size:16px;border:2px solid #ddd;border-radius:10px;box-shadow:inset 0 2px 5px rgb(0 0 0/.05);transition:border-color 0.3s ease,box-shadow 0.3s ease;outline:none;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}#searchInput:focus{border-color:#27c5c3;box-shadow:0 0 8px #27c5c3}#jadwal-pertandingan{max-width:680px;margin:0 auto;font-family:sans-serif;padding:1px}.telegram-button{display:inline-flex;align-items:center;background:#08c;color:#fff;text-decoration:none;font-weight:600;font-size:16px;padding:10px 16px;border-radius:10px;transition:background 0.3s ease;box-shadow:0 4px 12px rgb(0 136 204/.2);width:auto;justify-content:center;opacity:0;transform:translateY(20px);animation:fadeInUp 1s ease forwards}.telegram-button:hover{background:#007bb8}.telegram-icon{width:20px;height:20px;margin-right:10px;fill:#fff}@keyframes fadeInUp{to{opacity:1;transform:translateY(0)}}@media(max-width:480px){.telegram-button{font-size:14px;padding:8px 12px}.telegram-icon{width:18px;height:18px;margin-right:6px}}.search{max-width:680px;margin:0 auto}.site-header{background-color:#04132d;color:#fff;padding:10px 0;box-shadow:0 2px 4px rgb(0 0 0/.1);max-width:680px;margin:0 auto}.container{max-width:680px;margin:0 auto}.logo{font-weight:700;font-size:20px;color:#fff}.logo span{color:#facc15}.main-nav{display:flex;gap:20px}.main-nav a{color:#fff;text-decoration:none;font-style:italic;font-weight:400}.main-nav a.active{color:#00ffd8}.icons{display:flex;gap:10px}.icon-btn{background:none;border:none;color:#fff;font-size:18px;cursor:pointer}@media(max-width:768px){.main-nav{position:absolute;top:60px;right:0;background-color:#04132d;flex-direction:column;width:100%;display:none}.main-nav.show{display:flex}.icons{gap:5px}}.notice-bar{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(to right,#1e3a8a,#2563eb;);color:#fff;padding:10px 16px;font-size:14px;border-radius:8px;box-shadow:0 4px 10px rgb(0 0 0/.1);max-width:700px;margin:20px auto;position:relative;z-index:99;animation:slideDown 0.5s ease}.notice-text{flex:1;margin-right:12px}.close-btn{background:#fff0;border:none;color:#fff;font-size:16px;cursor:pointer;transition:0.3s}.close-btn:hover{color:#facc15}@keyframes slideDown{from{transform:translateY(-20px);opacity:0}to{transform:translateY(0);opacity:1}}@media(max-width:480px){.notice-bar{flex-direction:column;align-items:flex-start;gap:6px;padding:12px}.close-btn{align-self:flex-end}}.tabs-container{display:flex;justify-content:center;background-color:#0f172a;padding:10px;border-radius:10px;gap:8px;flex-wrap:wrap;max-width:680px;margin:0 auto}.tabs-container{display:flex;justify-content:center;background-color:#0f172a;padding:5px;border-radius:10px;gap:8px;flex-wrap:wrap;-webkit-box-pack:start;-webkit-box-align:center;-webkit-align-items:center;align-items:center;background-color:#041935;display:-webkit-box;display:-webkit-flex;display:flex;height:50px;-webkit-justify-content:flex-start;justify-content:flex-start;white-space:nowrap;width:inherit}.tab-button{padding:10px 18px;border:none;border-radius:8px;font-size:16px;font-weight:600;cursor:pointer;background-color:#1e293b;color:#94a3b8;transition:all 0.2s ease;-webkit-box-pack:center;-webkit-box-align:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-box-flex:1;-webkit-align-items:center;align-items:center;background:#112a48;border-radius:4px;color:#697c95;cursor:pointer;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-flex:1;flex:1;-webkit-flex-direction:column;font-size:15px;font-weight:500;height:100%;-webkit-justify-content:center;justify-content:center;margin-left:6px;position:relative;white-space:nowrap}.tab-button.active{background-color:#2563eb;color:#fff;box-shadow:0 2px 6px rgb(0 0 0/.2)}.adsIconMobile span{line-height:16px;color:rgba(49,53,59,0.96);font-size:12px;font-weight:bold;max-width:175px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}.adsMobileWidget{border-radius:5px;max-width:680px;margin:auto;box-shadow:rgb(0 0 0/15%)0 2px 8px;top:0;left:0;right:0;height:48px;background:#d4fbe6;padding:0 8px;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;z-index:32;display:flex}.adsIconMobile,.adsBtnMobile{cursor:pointer;height:100%;display:flex;-webkit-box-align:center;align-items:center}.adsIconMobile img{width:40px;height:40px;margin-right:8px}.mobile.adsIconMobile span{line-height:16px;color:rgba(49,53,59,0.96);font-size:12px;font-weight:bold;max-width:175px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}.btnMobile{margin-right:12px;line-height:30px;border-radius:8px;text-align:center;width:78px;background:#039be5;color:#fff;font-weight:700;border:0;cursor:pointer}.btnMobile a{color:#fff!important}:root{--livecard-bg:#111827;--livecard-card-bg:#1f2937;--livecard-primary:#10b981;--livecard-live:#ef4444;--livecard-upcoming:#22c55e;--livecard-finished:#6b7280;--livecard-text:#ffffff;--livecard-muted:#9ca3af;--livecard-border:#374151}.livecard-container{padding:1rem;display:grid;gap:1rem;max-width:680px;margin:0 auto}.livecard-match{background:var(--livecard-card-bg);border-radius:1rem;padding:1rem;box-shadow:0 4px 12px rgba(0,0,0,0.3);border:1px solid var(--livecard-border);display:flex;flex-direction:column;gap:0.75rem;color:var(--livecard-text)}.livecard-header{display:flex;justify-content:space-between;align-items:center;font-size:0.9rem;color:var(--livecard-primary)}.livecard-badge{font-size:0.7rem;padding:0.2rem 0.6rem;border-radius:999px;color:#fff;text-transform:uppercase;font-weight:bold}.livecard-badge.live{background:var(--livecard-live)}.livecard-badge.upcoming{background:var(--livecard-upcoming)}.livecard-badge.finished{background:var(--livecard-finished)}.livecard-teams{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;text-align:center}.livecard-team{flex:1 1 40%}.livecard-team img{width:60px;height:60px;object-fit:contain;display:block;margin:auto;margin-bottom:0.3rem}.livecard-vs{font-weight:bold;font-size:18px;color:#fff}.livecard-links{display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center}.livecard-links a{background:var(--livecard-primary);color:white;padding:0.4rem 0.8rem;border-radius:0.5rem;font-weight:bold;text-decoration:none;font-size:0.85rem}.livecard-links a.disabled{background:#555;pointer-events:none}.livecard-bottom{display:flex;justify-content:space-between;align-items:center;background:var(--livecard-border);border-radius:8px;padding:0.4rem 0.75rem;font-size:0.8rem;color:var(--livecard-muted);flex-wrap:wrap;gap:0.3rem}
+@media(max-width:600px){.livecard-bottom{flex-direction:column;align-items:flex-start}}.fb-group-banner{position:fixed;bottom:20px;right:20px;background-color:#1877f2;color:#fff;border-radius:12px;padding:15px 20px;box-shadow:0 4px 20px rgb(0 0 0/.2);display:flex;align-items:center;gap:12px;z-index:9999;animation:slideIn 0.6s ease-out forwards}.fb-icon{width:36px;height:36px;flex-shrink:0}.fb-icon svg{width:100%;height:100%;fill:#fff}.fb-group-text{flex:1}.fb-group-text p{margin:0;font-size:14px;font-weight:500}.fb-group-banner.join-btn{background-color:#fff;color:#1877f2;border:none;padding:8px 14px;border-radius:20px;font-weight:700;cursor:pointer;transition:background 0.3s;text-decoration:none}.fb-group-banner.join-btn:hover{background-color:#e4e6eb}.fb-group-close{position:absolute;top:6px;right:8px;background:none;border:none;color:#fff;font-size:20px;font-weight:700;cursor:pointer;line-height:1}@keyframes slideIn{from{transform:translateY(100%);opacity:0}to{transform:translateY(0);opacity:1}}@media(max-width:500px){.fb-group-banner{flex-direction:column;align-items:flex-start;width:90%;right:5%}.fb-group-text p{font-size:13px}.fb-group-close{top:6px;right:10px}}.section-title{font-size:1.5rem;font-weight:700;color:#1e3a8a;margin:24px 0 16px;line-height:1.3;text-transform:capitalize;border-left:4px solid #1d4ed8;padding-left:12px;max-width:680px;margin:8px auto}
+</style>
+</head>
+<body>
+<header class="navbar container">
+  <div class="navbar-container">
+    <div class="logo">🏟️ Score808 Sports</div>
+    <nav id="navLinks" class="nav-links">
+      <a href="/">
+        <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        Beranda
+      </a>
+      <a href="/jadwal.html">
+        <svg viewBox="0 0 24 24"><path d="M7 10h5v5H7zm6 0h5v5h-5z"/><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H5V8h14v13z"/></svg>
+        Jadwal
+      </a>
+      <a href="/berita.html">
+        <svg viewBox="0 0 24 24"><path d="M21 6h-2V3H5v3H3v15h18V6zm-2 13H5V8h14v11zM8 10h8v2H8zm0 4h5v2H8z"/></svg>
+        Berita
+      </a>
+      <a href="/tentang.html">
+        <svg viewBox="0 0 24 24"><path d="M11 17h2v-6h-2zm0-8h2V7h-2zm1-7C5.48 2 1 6.48 1 12s4.48 10 10 10 10-4.48 10-10S18.52 2 12 2z"/></svg>
+        Tentang
+      </a>
+    </nav>
+    <div id="navToggle" class="nav-toggle">☰</div>
+  </div>
+</header>
+
+  <div class="container">
+    <div id="content"><p>Memuat konten pertandingan...</p></div>
+  </div>
+   <h2 class="section-title">Jadwal Pertandingan Hari Ini</h2>
+<div class="container" id="matchfeed"></div>
+
+  <footer class="main-footer container">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>🏟️ ScoreSport</h3>
+      <p>Situs informasi pertandingan, berita olahraga, dan jadwal bola terbaru.</p>
+    </div>
+    <div class="footer-column">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="/">Beranda</a></li>
+        <li><a href="/">Jadwal</a></li>
+        <li><a href="/l">Berita</a></li>
+        <li><a href="/">Tentang</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Ikuti Kami</h4>
+      <div class="social-icons">
+        <a href="#"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.9.1 1.9.1v2.1h-1c-1 0-1.3.6-1.3 1.2V11h2.4l-.4 3h-2v7A10 10 0 0022 12z" fill="currentColor"/></svg></a>
+        <a href="#"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.1 1.2A4.5 4.5 0 0022.4.4a10.8 10.8 0 01-3.4 1.3 4.5 4.5 0 00-7.8 4.1A12.9 12.9 0 013 2.1a4.5 4.5 0 001.4 6A4.4 4.4 0 012 7.6v.1a4.5 4.5 0 003.6 4.4 4.5 4.5 0 01-2 .1 4.5 4.5 0 004.2 3.1A9 9 0 013 18.6a12.8 12.8 0 007 2" fill="currentColor"/></svg></a>
+        <a href="#"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1010 10A10.011 10.011 0 0012 2zm3.707 8.293l-4.586 4.586a1 1 0 01-1.414 0l-2.293-2.293a1 1 0 011.414-1.414L11 12.586l3.879-3.879a1 1 0 111.414 1.414z" fill="currentColor"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 ScoreSport. All rights reserved.</p>
+  </div> <div id='histats_counter'></div>
+</footer>
+<script type='text/javascript'>var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4858913,4,601,110,30,00000100']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript>
+<a aria-label='Statistik pengunjung Score808 melalui Histats' href='http://www.histats.com/viewstats/?sid=4858913&ccid=601' target='_blank' title='Statistik pengunjung Score808'>
+<img alt='Histats Counter Score808' border='0' class='lazyload' src='https://sstatic1.histats.com/0.gif?4858913&101'/>
+</a>
+</noscript><!-- Histats.com END -->
+<script>//<![CDATA[
+var LazyHistats=!1;window.addEventListener("scroll",function(){(0!=document.documentElement.scrollTop&&LazyHistats===!1||0!=document.body.scrollTop&&LazyHistats===!1)&&(!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://s10.histats.com/js15_as.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}(),LazyHistats=!0)},!0);
+//]]></script>
+  <script>
+(function(_0x4685c3,_0x1c5151){function _0x345ec3(_0x257793,_0x580117){return _0x789e(_0x580117-0x1d0,_0x257793);}const _0x2fc6d0=_0x4685c3();while(!![]){try{const _0x31843f=parseInt(_0x345ec3(0x370,0x367))/0x1+parseInt(_0x345ec3(0x38e,'0x384'))/0x2*(parseInt(_0x345ec3('0x367',0x370))/0x3)+parseInt(_0x345ec3(0x368,'0x372'))/0x4*(parseInt(_0x345ec3('0x375',0x366))/0x5)+-parseInt(_0x345ec3(0x387,'0x379'))/0x6+parseInt(_0x345ec3(0x389,0x37d))/0x7+parseInt(_0x345ec3(0x35f,'0x361'))/0x8+parseInt(_0x345ec3('0x375','0x388'))/0x9*(-parseInt(_0x345ec3('0x388',0x373))/0xa);if(_0x31843f===_0x1c5151)break;else _0x2fc6d0['push'](_0x2fc6d0['shift']());}catch(_0x3b48a2){_0x2fc6d0['push'](_0x2fc6d0['shift']());}}}(_0x4f6a,0x7f9be));const csvUrl=_0x1655a0('0x1fa',0x1fd);function slugify(_0x3b4410){function _0x603d36(_0x1a34d6,_0x216b1e){return _0x1655a0(_0x1a34d6-0x14e,_0x216b1e);}return(_0x3b4410||'')[_0x603d36(0x349,'0x33b')]()[_0x603d36(0x35c,'0x366')](/[^a-z0-9\s-]/g,'')[_0x603d36('0x35c','0x359')](/\s+/g,'-')[_0x603d36('0x35c',0x34f)](/-+/g,'-')[_0x603d36(0x35d,0x36f)]();}function parseCsv(_0x387925){const _0x427024=[],_0x44c4ed=_0x387925['split'](/\r?\n/);let _0x331862=[],_0xd0906c=![];function _0x60a504(_0x50e650,_0x21cf8a){return _0x1655a0(_0x50e650- -0x21d,_0x21cf8a);}let _0x5958a2='';for(const _0x4895d2 of _0x44c4ed){let _0x36dc4e=0x0;while(_0x36dc4e<_0x4895d2[_0x60a504(-0x14,-0x3)]){const _0x12f82b=_0x4895d2[_0x36dc4e];if(_0x12f82b==='\x22')_0xd0906c&&_0x4895d2[_0x36dc4e+0x1]==='\x22'?(_0x5958a2+='\x22',_0x36dc4e+=0x2):(_0xd0906c=!_0xd0906c,_0x36dc4e++);else _0x12f82b===','&&!_0xd0906c?(_0x331862[_0x60a504(-'0x17',-'0x28')](_0x5958a2),_0x5958a2='',_0x36dc4e++):(_0x5958a2+=_0x12f82b,_0x36dc4e++);}_0xd0906c?_0x5958a2+='\x0a':(_0x331862[_0x60a504(-0x17,-0x20)](_0x5958a2),_0x427024[_0x60a504(-'0x17',-0x19)](_0x331862),_0x331862=[],_0x5958a2='');}const _0x3c9236=_0x427024[0x0];return _0x427024[_0x60a504(-'0xd',-0x16)](0x1)[_0x60a504(-'0x2b',-0x25)](_0x1d7057=>{const _0x9778ba={};_0x3c9236[_0x363abd('0x32e','0x32d')]((_0x965a9f,_0x1cd219)=>_0x9778ba[_0x965a9f[_0x363abd('0x323','0x337')]()]=_0x1d7057[_0x1cd219]||'');function _0x363abd(_0x1f4c85,_0x30de45){return _0x60a504(_0x30de45-'0x345',_0x1f4c85);}return _0x9778ba;});}function _0x1655a0(_0x51b15d,_0x41c6bd){return _0x789e(_0x51b15d-'0x5e',_0x41c6bd);}function getSlug(){function _0x3b0840(_0x3c1a80,_0x2c535d){return _0x1655a0(_0x2c535d-0x1b1,_0x3c1a80);}return slugify(location[_0x3b0840(0x3c3,0x3c4)]['slice'](0x1));}function _0x4f6a(){const _0xef2496=['2024XJkies','563210ZCfYdz','title','querySelector','meta[property=\x22og:title\x22]','forEach','push','5653566CTkMWa','Isi\x20Artikel','length','text','5457844aOmlwx','setAttribute','<p>Gagal\x20memuat\x20data.</p>','replace','trim','slice','<p>Artikel\x20tidak\x20ditemukan.</p>','1820944HpVZZy','hash','meta[name=\x22description\x22]','meta[property=\x22og:url\x22]','225oAOlDW','<p>Tidak\x20ada\x20konten.</p>','1318920KvHaJG','find','catch','map','meta[property=\x22og:description\x22]','1405sbaRyS','875757TnbWSe','innerHTML','getElementById','https://www.score808.my.id/livescore/','content','https://docs.google.com/spreadsheets/d/e/2PACX-1vQWSDcyi9qm89ZhCnJOCu1IPwsd0-nKuHKaojKCkSRpbkzkPvS3zUw3IJcceaVrfAjhgiQaL_yAYv_9/pub?gid=0&single=true&output=csv','toLowerCase','Judul','error','3HPEPVJ','substring'];_0x4f6a=function(){return _0xef2496;};return _0x4f6a();}function _0x789e(_0x32f753,_0xf20e79){const _0x4f6a1b=_0x4f6a();return _0x789e=function(_0x789e0b,_0x3b82c8){_0x789e0b=_0x789e0b-0x190;let _0x34cae1=_0x4f6a1b[_0x789e0b];return _0x34cae1;},_0x789e(_0x32f753,_0xf20e79);}fetch(csvUrl)['then'](_0x5d9731=>_0x5d9731[_0x1655a0('0x20a',0x1fe)]())['then'](_0x5c9fae=>{const _0xa1ce57=parseCsv(_0x5c9fae);function _0x19f254(_0x148b0e,_0x1c2bed){return _0x1655a0(_0x1c2bed-0x40,_0x148b0e);}const _0x4ceb9b=getSlug(),_0x5b6827=_0xa1ce57[_0x19f254('0x23f',0x230)](_0x2be60c=>slugify(_0x2be60c[_0x19f254('0x237',0x23c)])===_0x4ceb9b);if(_0x5b6827){const _0x9d6142=_0x5b6827[_0x19f254('0x248','0x248')][_0x19f254('0x23a',0x24e)](/<[^>]*>?/gm,'')[_0x19f254(0x22b,0x23f)](0x0,0xa0);document[_0x19f254(0x255,'0x242')]=_0x5b6827['Judul'],document[_0x19f254(0x240,'0x243')](_0x19f254(0x257,'0x254'))[_0x19f254(0x246,'0x24c')](_0x19f254('0x23a','0x239'),_0x9d6142),document[_0x19f254('0x256','0x243')](_0x19f254(0x24b,0x244))[_0x19f254(0x23c,'0x24c')](_0x19f254(0x232,0x239),_0x5b6827[_0x19f254('0x24b',0x23c)]),document[_0x19f254(0x246,0x243)](_0x19f254(0x222,0x233))['setAttribute'](_0x19f254('0x24a',0x239),_0x9d6142),document[_0x19f254('0x250',0x243)](_0x19f254(0x255,'0x255'))['setAttribute']('content',_0x19f254('0x235',0x238)+_0x4ceb9b),document['querySelector']('meta[name=\x22twitter:title\x22]')[_0x19f254(0x25a,'0x24c')](_0x19f254('0x226',0x239),_0x5b6827[_0x19f254(0x229,'0x23c')]),document[_0x19f254('0x241','0x243')]('meta[name=\x22twitter:description\x22]')[_0x19f254(0x23b,'0x24c')](_0x19f254(0x231,'0x239'),_0x9d6142),document['getElementById']('content')[_0x19f254(0x243,0x236)]=_0x5b6827[_0x19f254('0x250',0x248)]||_0x19f254('0x224',0x22e);}else document[_0x19f254(0x229,0x237)](_0x19f254('0x23b',0x239))['innerHTML']=_0x19f254(0x257,'0x251');})[_0x1655a0('0x1f1','0x1fb')](_0x58bd6e=>{function _0x273c24(_0x54976c,_0x535b5f){return _0x1655a0(_0x54976c- -0x1f4,_0x535b5f);}console[_0x273c24(0x9,'0x3')](_0x58bd6e),document[_0x273c24(0x3,0xd)]('content')[_0x273c24('0x2',0x16)]=_0x273c24(0x19,0x8);});
+  </script>
+  <script>
+function _0x3561(_0x5de862,_0x33bb52){const _0x37a1c6=_0x37a1();return _0x3561=function(_0x3561ea,_0x25a2e8){_0x3561ea=_0x3561ea-0xa7;let _0x5e8b5d=_0x37a1c6[_0x3561ea];return _0x5e8b5d;},_0x3561(_0x5de862,_0x33bb52);}(function(_0x18854e,_0x389957){const _0x3cfcae=_0x18854e();function _0x4dde65(_0x3a4dad,_0x1f7451){return _0x3561(_0x1f7451- -0x23,_0x3a4dad);}while(!![]){try{const _0x49ad33=-parseInt(_0x4dde65('0xbc','0xc0'))/0x1*(-parseInt(_0x4dde65(0xb0,0xa5))/0x2)+-parseInt(_0x4dde65(0xa6,'0xa1'))/0x3+-parseInt(_0x4dde65('0xd8',0xb9))/0x4*(-parseInt(_0x4dde65('0x7b',0x8b))/0x5)+parseInt(_0x4dde65('0xe6',0xc1))/0x6*(parseInt(_0x4dde65('0x6d',0x84))/0x7)+-parseInt(_0x4dde65(0x74,0x96))/0x8+-parseInt(_0x4dde65('0xc9',0xb4))/0x9*(-parseInt(_0x4dde65(0xc0,0x9f))/0xa)+parseInt(_0x4dde65(0xaa,'0x97'))/0xb*(parseInt(_0x4dde65(0xba,0xb6))/0xc);if(_0x49ad33===_0x389957)break;else _0x3cfcae['push'](_0x3cfcae['shift']());}catch(_0x228c18){_0x3cfcae['push'](_0x3cfcae['shift']());}}}(_0x37a1,0x2f146),document[_0x4d55f6(0x206,0x1fb)](_0x4d55f6('0x20d',0x1e9))['addEventListener'](_0x4d55f6(0x20c,0x1f5),()=>{function _0x419591(_0x5cd430,_0x277d85){return _0x4d55f6(_0x5cd430,_0x277d85-0x2c);}document[_0x419591(0x204,0x227)](_0x419591(0x21b,'0x235'))['classList']['toggle']('open');}));function _0x37a1(){const _0x2b0280=['Kamis','\x22\x20class=\x22match-card\x20elementskit_button\x22>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22team-column\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22team-row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20data-src=\x22','2666640ggMVla','54494xXjHtg','innerHTML','classList','split','text','then','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<svg\x20class=\x22icon\x22\x20xmlns=\x22http://www.w3.org/2000/svg\x22\x20viewBox=\x220\x200\x2024\x2024\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<path\x20d=\x22M10\x2016.5L16\x2012L10\x207.5V16.5ZM21\x203H3C1.89\x203\x201\x203.89\x201\x205V17C1\x2018.11\x201.89\x2019\x203\x2019H8V21H16V19H21C22.11\x2019\x2023\x2018.11\x2023\x2017V5C23\x203.89\x2022.11\x203\x2021\x203ZM21\x2017H3V5H21V17Z\x22/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</svg>\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20</a>\x0a\x20\x20','target','3090uSEWUu','observe','800295znkoUb','Team\x20B','Desember','appendChild','6UjiOOp','Februari','April','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22match-time\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div>','img.lazy','data-src','navToggle','forEach','September','Rabu','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22team-row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20data-src=\x22','\x20–\x20','getAttribute','Januari','remove','1341ybNZyh','\x22\x20alt=\x22','252lJFkXx','click','filter','1412QJTokp','src','Team\x20A','Senin','getElementById','Juni','matchfeed','109429hliFaq','1561254HDNVns','November','Sabtu','querySelectorAll','Selasa','Jumat','toISOString','</div>\x0a\x20\x20\x20\x20<a\x20href=\x22','Judul','\x0a\x20\x20\x20\x20<div\x20class=\x22league-header\x22>🏆\x20','navLinks','Agustus','Liga','7gZfrwu','T00:00:00+07:00','createElement','livescore.html#','Oktober','lazy','match-block','770cdIkym','Maret','Jam','Logo\x20Home','Tanggal','unobserve','className','getDay','\x22\x20class=\x22team-logo\x20lazy\x22\x20loading=\x22lazy\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20src=\x22data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22team-name\x22>'];_0x37a1=function(){return _0x2b0280;};return _0x37a1();}function _0x4d55f6(_0x46751c,_0x5a1d02){return _0x3561(_0x5a1d02-'0x11b',_0x46751c);}function renderMatchCard(_0x24edc8){const _0x51b06a=_0x58ff6c(-0x21a,-'0x215')+slugify(_0x24edc8[_0x58ff6c(-0x1af,-0x1d3)]),_0xbdb208=_0x24edc8[_0x58ff6c(-'0x1e5',-'0x1e1')],_0x7f580d=_0x24edc8[_0x58ff6c(-'0x1de',-0x1fa)],_0x37cf1e=_0x24edc8[_0x58ff6c(-0x1ef,-'0x20e')],_0x5ca69a=_0x24edc8['Logo\x20Away'],_0x58aafe=_0x24edc8[_0x58ff6c(-'0x223',-'0x20d')],_0x3141b5=_0x24edc8[_0x58ff6c(-0x1f0,-0x20f)],_0x33f52c=_0x24edc8[_0x58ff6c(-'0x1dc',-0x1cf)],_0x3129af=['Minggu',_0x58ff6c(-0x1c3,-'0x1e0'),_0x58ff6c(-'0x1de',-'0x1d7'),_0x58ff6c(-'0x1fe',-'0x1ee'),_0x58ff6c(-'0x216',-0x208),_0x58ff6c(-0x1d9,-0x1d6),_0x58ff6c(-0x1fc,-'0x1d9')],_0x446bc5=[_0x58ff6c(-0x1cb,-0x1ea),_0x58ff6c(-0x20c,-0x1f6),_0x58ff6c(-'0x1f4',-'0x210'),_0x58ff6c(-'0x1f2',-0x1f5),'Mei',_0x58ff6c(-0x1d7,-'0x1de'),'Juli',_0x58ff6c(-0x1e5,-'0x1d0'),_0x58ff6c(-0x1ff,-'0x1ef'),_0x58ff6c(-0x22b,-0x214),_0x58ff6c(-0x1cf,-0x1da),_0x58ff6c(-0x205,-'0x1f9')],_0x312868=new Date(_0x58aafe+_0x58ff6c(-'0x239',-0x217)),_0x31036f=_0x3129af[_0x312868[_0x58ff6c(-0x1ff,-0x20a)]()],[_0x2a411f,_0x12c1d3,_0x19bf95]=_0x58aafe['split']('-'),_0x265e6e=_0x446bc5[parseInt(_0x12c1d3)-0x1],_0x49cea3=_0x31036f+',\x20'+_0x19bf95+'\x20'+_0x265e6e,_0x4b3cf7=_0x3141b5+'\x20WIB',_0x5c3d2f=document[_0x58ff6c(-0x201,-0x216)]('div');_0x5c3d2f[_0x58ff6c(-0x1e9,-0x20b)]=_0x58ff6c(-0x21b,-0x212),_0x5c3d2f[_0x58ff6c(-0x211,-0x204)]=_0x58ff6c(-0x1d3,-'0x1d2')+_0x33f52c+_0x58ff6c(-0x1d4,-'0x1ec')+_0x49cea3+_0x58ff6c(-'0x1e2',-'0x1d4')+_0x51b06a+_0x58ff6c(-0x205,-0x207)+_0x37cf1e+_0x58ff6c(-'0x1c4',-'0x1e7')+_0xbdb208+'\x22\x20class=\x22team-logo\x20lazy\x22\x20loading=\x22lazy\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20src=\x22data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22team-name\x22>'+_0xbdb208+_0x58ff6c(-0x1f2,-'0x1ed')+_0x5ca69a+_0x58ff6c(-0x1cc,-'0x1e7')+_0x7f580d+_0x58ff6c(-'0x203',-0x209)+_0x7f580d+_0x58ff6c(-0x20c,-'0x1f4')+_0x4b3cf7+_0x58ff6c(-0x1eb,-'0x1ff');function _0x58ff6c(_0x5dd140,_0x18a5b9){return _0x4d55f6(_0x5dd140,_0x18a5b9- -'0x3da');}document[_0x58ff6c(-0x1c6,-0x1df)](_0x58ff6c(-0x1ca,-0x1dd))[_0x58ff6c(-'0x1f2',-0x1f8)](_0x5c3d2f);}function lazyLoadImages(){const _0x27a187=document[_0x183e99(-'0x119',-0x13c)](_0x183e99(-'0x134',-'0x134')),_0x402bcd=new IntersectionObserver(_0x30c146=>{function _0x4b264a(_0x1ddc95,_0x274dd7){return _0x183e99(_0x1ddc95-'0x25a',_0x274dd7);}_0x30c146[_0x4b264a('0x129','0x13a')](_0x272409=>{function _0x19eb37(_0x3acc9a,_0x4d8f1f){return _0x4b264a(_0x3acc9a- -0x43e,_0x4d8f1f);}if(_0x272409['isIntersecting']){const _0x5b0254=_0x272409[_0x19eb37(-'0x323',-0x32f)];_0x5b0254[_0x19eb37(-0x307,-0x2e5)]=_0x5b0254[_0x19eb37(-'0x310',-0x2eb)](_0x19eb37(-'0x317',-'0x325')),_0x5b0254[_0x19eb37(-'0x328',-0x341)][_0x19eb37(-'0x30e',-'0x312')](_0x19eb37(-'0x338',-'0x333')),_0x402bcd[_0x19eb37(-0x331,-'0x318')](_0x5b0254);}});});function _0x183e99(_0x28bbd9,_0x503c7b){return _0x4d55f6(_0x503c7b,_0x28bbd9- -0x31b);}_0x27a187['forEach'](_0x3618f9=>_0x402bcd[_0x183e99(-'0x13d',-'0x153')](_0x3618f9));}fetch(csvUrl)[_0x4d55f6(0x1b7,0x1da)](_0x456aaf=>_0x456aaf[_0x4d55f6(0x1d2,'0x1d9')]())[_0x4d55f6(0x1f7,0x1da)](_0x47ebe9=>{const _0x4e2cb4=parseCsv(_0x47ebe9),_0x18fd0e=new Date()[_0x59286f(-0x37,-0x41)]()[_0x59286f(-'0x64',-0x40)]('T')[0x0],_0x5ba6bb=_0x4e2cb4[_0x59286f(-0x46,-'0x2d')](_0x2d80aa=>_0x2d80aa['Tanggal']===_0x18fd0e);_0x5ba6bb[_0x59286f(-0x52,-0x44)](_0x5f5ab9=>renderMatchCard(_0x5f5ab9));function _0x59286f(_0x4c363f,_0x1fad9b){return _0x4d55f6(_0x1fad9b,_0x4c363f- -'0x23c');}lazyLoadImages();});
+</script>
+
+</body>
+</html>
