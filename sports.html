@@ -21,6 +21,7 @@
 <meta name="twitter:title" content="Score808 Sports - Jadwal Bola dan Berita Olahraga Terkini"/>
 <meta name="twitter:description" content="Cek skor live dan jadwal pertandingan sepak bola terkini di Score808 Sport."/>
 <meta name="twitter:image" content="https://www.score808.my.id/image/android-chrome-512x512.png"/>
+<link as='script' crossorigin='anonymous' href='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6264483052991753' rel='preload'/>
 <!-- Favicon -->
 <link rel="icon" href="https://www.score808.my.id/image/favicon.ico" type="image/x-icon"/>
 <style>body {background-color: #04132d;}
@@ -101,6 +102,12 @@ a.a_btn{line-height:1.5em;display:inline-block;text-align:center;background:hsl(
   color: var(--card-muted);
   text-align: right;
 }
+.score-feed{display:flex;flex-direction:column;gap:16px;padding:1px;max-width:680px;margin:auto;font-family:'Segoe UI',sans-serif}.score-item{display:flex;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 6px rgb(0 0 0 / .08);align-items:center;padding:10px;gap:12px;transition:transform 0.2s}.score-item:hover{transform:scale(1.01)}.score-thumb{width:80px;height:80px;border-radius:12px;object-fit:cover;flex-shrink:0}.score-info{flex:1;display:flex;flex-direction:column;justify-content:center}.score-title{font-size:16px;font-weight:600;color:#111;text-decoration:none;line-height:1.4;margin-bottom:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}.score-meta{font-size:13px;color:#673AB7}.load-more-wrapper{text-align:center;padding:20px}.load-more-btn{background:#b71c1c;color:#fff;border:none;padding:10px 18px;border-radius:6px;font-weight:500;cursor:pointer;position:relative;display:inline-flex;align-items:center;gap:8px}.spinner{width:20px;height:20px;animation:spin 1s linear infinite}.spinner.hidden{display:none}.spinner .path{stroke:#fff;stroke-linecap:round}@keyframes spin{100%{transform:rotate(360deg)}}
+	.score-heading {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 0 8px;
+}
 </style>
 <script type="application/ld+json">
 {
@@ -133,8 +140,6 @@ a.a_btn{line-height:1.5em;display:inline-block;text-align:center;background:hsl(
   ]
 }
 </script>
-
-
 </head>
 <body>
 <header class="navbar container">
@@ -180,15 +185,18 @@ a.a_btn{line-height:1.5em;display:inline-block;text-align:center;background:hsl(
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
   </div>
-<h2 class="section-title">Berita Score808 Terbaru</h2>
-<!-- Recent Posts -->
-<div id="recent-posts" class="recent-posts-container container"></div>
-<!-- Tombol Load More -->
-<div class="load-more-container">
-  <button id="loadMoreBtn" class="load-more-btn container">Load More</button>
-  <div id="loader" class="loader" style="display:none;"></div>
-</div>
+
 <!-- Match Feed (jika ada) -->
+ <h2 class="section-title">Pertandingan Utama</h2>
+ <div id="score-feed" class="score-feed"></div>
+<div id="load-more-wrapper" class="load-more-wrapper">
+  <button id="load-more" class="load-more-btn">
+    <svg class="spinner hidden" viewBox="0 0 50 50">
+      <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"/>
+    </svg>
+    <span>Load More</span>
+  </button>
+</div>
   <div class="adsense-wrapper">
 <!-- Display score -->
 <ins class="adsbygoogle"
@@ -199,16 +207,33 @@ a.a_btn{line-height:1.5em;display:inline-block;text-align:center;background:hsl(
      data-full-width-responsive="true"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-  </div>
- <h2 class="section-title">Bola Hari Ini</h2>
+</script>  </div>
+  <h2 class="section-title">Score808 Bola Hari Ini</h2>
 <div id="matchfeed"></div>
-  
+  <div class="adsense-wrapper">
+<!-- Display score -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6264483052991753"
+     data-ad-slot="4017759028"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>  </div>
+  <h2 class="section-title">Berita Olahraga Terbaru</h2>
+<!-- Recent Posts -->
+<div id="recent-posts" class="recent-posts-container container"></div>
+<!-- Tombol Load More -->
+<div class="load-more-container">
+  <button id="loadMoreBtn" class="load-more-btn container">Load More</button>
+  <div id="loader" class="loader" style="display:none;"></div>
+</div>
 <footer class="main-footer container">
   <div class="footer-container">
     <div class="footer-column">
       <h3>Score808 Sport</h3>
-      <p>Situs informasi pertandingan, berita olahraga, dan jadwal bola terbaru.</p>
+      <p>Situs Score 808 informasi pertandingan, berita olahraga, dan jadwal bola terbaru.</p>
     </div>
     <div class="footer-column">
       <h4>Menu</h4>
@@ -239,17 +264,7 @@ a.a_btn{line-height:1.5em;display:inline-block;text-align:center;background:hsl(
     document.getElementById("navLinks")?.classList.toggle("open");
   });
 </script>
-<script>
-//<![CDATA[
-var lazyadsense = false;
-window.addEventListener("scroll", function(){
-if ((document.documentElement.scrollTop != 0 && lazyadsense === false) || (document.body.scrollTop != 0 && lazyadsense === false)) {
-(function() { var ad = document.createElement('script'); ad.setAttribute('crossorigin','anonymous'); ad.async = true; ad.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6264483052991753'; var sc = document.getElementsByTagName('script')[0]; sc.parentNode.insertBefore(ad, sc); })();
-lazyadsense = true;
-  }
-}, true);
-//]]>
-</script>
+
 <script type='text/javascript'>var _Hasync= _Hasync|| [];
 _Hasync.push(['Histats.start', '1,4858913,4,601,110,30,00000100']);
 _Hasync.push(['Histats.fasi', '1']);
@@ -271,8 +286,10 @@ var LazyHistats=!1;window.addEventListener("scroll",function(){(0!=document.docu
 // === Bagian Pertandingan dari Google Sheets ===
 (function(_0x42fb00,_0x10c864){const _0x2777fc=_0x42fb00();function _0x15539d(_0x15eb34,_0x465ec8){return _0x4012(_0x465ec8- -'0x16b',_0x15eb34);}while(!![]){try{const _0x3232f2=-parseInt(_0x15539d(-'0xb4',-'0xc5'))/0x1*(-parseInt(_0x15539d(-0xee,-0xde))/0x2)+-parseInt(_0x15539d(-0xa3,-0xbf))/0x3*(parseInt(_0x15539d(-'0xc2',-'0xc0'))/0x4)+-parseInt(_0x15539d(-0xb9,-'0xca'))/0x5*(parseInt(_0x15539d(-'0xb6',-0xb4))/0x6)+parseInt(_0x15539d(-'0x9a',-0xbe))/0x7+-parseInt(_0x15539d(-'0xc7',-0xce))/0x8+parseInt(_0x15539d(-0xa5,-0xbd))/0x9+-parseInt(_0x15539d(-0xd0,-'0xb7'))/0xa*(-parseInt(_0x15539d(-0xe7,-'0xf8'))/0xb);if(_0x3232f2===_0x10c864)break;else _0x2777fc['push'](_0x2777fc['shift']());}catch(_0xaf11b){_0x2777fc['push'](_0x2777fc['shift']());}}}(_0x1648,0xa6dd6));const sheetUrl=_0xb6a11b(-'0x18f',-'0x190'),containerMatch=document[_0xb6a11b(-'0x159',-'0x16a')]('matchfeed');function slugify(_0x551f6c){function _0x3d3413(_0x2dde36,_0x31269a){return _0xb6a11b(_0x31269a,_0x2dde36-'0x322');}return _0x551f6c['toLowerCase']()['replace'](/[^a-z0-9\s-]/g,'')[_0x3d3413(0x190,'0x174')](/\s+/g,'-')['replace'](/-+/g,'-')[_0x3d3413('0x1a9','0x1c5')]();}function parseCSV(_0x3f883b){function _0x5c68b6(_0x27df9f,_0x5121df){return _0xb6a11b(_0x5121df,_0x27df9f-0x87);}const _0x186dc4=_0x3f883b[_0x5c68b6(-0xf2,-0xf3)]()['split']('\x0a'),_0xff14a7=_0x186dc4[0x0][_0x5c68b6(-0xd4,-0xd4)](',')[_0x5c68b6(-'0x112',-'0x114')](_0x43b51a=>_0x43b51a[_0x5c68b6(-'0xf2',-0x103)]()[_0x5c68b6(-0xef,-0xe4)]());return _0x186dc4[_0x5c68b6(-0xfe,-0xdb)](0x1)[_0x5c68b6(-'0x112',-'0x10d')](_0x50d2d9=>{const _0x2bb010=_0x50d2d9['split'](',')[_0x516850(0x22c,'0x229')](_0x303f56=>_0x303f56[_0x516850(0x26c,0x249)]());function _0x516850(_0x339505,_0x58aead){return _0x5c68b6(_0x58aead-0x33b,_0x339505);}let _0x1870a8={};return _0xff14a7[_0x516850(0x242,0x254)]((_0x2cb091,_0x4d0365)=>{_0x1870a8[_0x2cb091]=_0x2bb010[_0x4d0365]||'';}),_0x1870a8;});}function renderMatchCard(_0x306076){const _0x2b8ac6=_0x203f43('0x11d','0x107')+slugify(_0x306076[_0x203f43(0x110,0xfb)]);function _0x203f43(_0x82f0b3,_0x5aaf92){return _0xb6a11b(_0x82f0b3,_0x5aaf92-'0x27c');}const _0xde686a=_0x306076[_0x203f43('0x118','0x101')],_0x46051e=_0x306076[_0x203f43(0xbd,0xe1)],_0x15041b=_0x306076[_0x203f43('0xfa','0xf4')],_0x5940cd=_0x306076[_0x203f43(0xf7,'0xe7')],_0x3b6fd9=_0x306076[_0x203f43('0x10a','0x10b')],_0x1fbeb6=_0x306076['jam'],_0xcae48b=_0x306076[_0x203f43(0x133,0x113)],_0x56d433=[_0x203f43('0xe8',0xfe),_0x203f43('0x100','0xf1'),_0x203f43('0xd8',0xed),_0x203f43('0xf9','0x115'),_0x203f43('0x111',0x11b),_0x203f43(0xd1,'0xdf'),_0x203f43('0x13d','0x11d')],_0x19b03a=[_0x203f43('0x108','0x109'),_0x203f43(0x111,0x104),'Maret','April',_0x203f43(0x103,'0x105'),'Juni',_0x203f43('0xc1',0xdc),'Agustus',_0x203f43('0xee','0xe8'),_0x203f43('0xca','0xee'),_0x203f43('0xf8','0xe0'),_0x203f43('0xf6',0xf5)],_0x3cd195=new Date(_0x3b6fd9+_0x203f43('0xf9',0x10a)),_0x1d4beb=_0x56d433[_0x3cd195[_0x203f43(0x111,'0xf6')]()],[_0x28bffe,_0x13df97,_0x27ec3b]=_0x3b6fd9[_0x203f43(0x104,'0x121')]('-'),_0x471d86=_0x19b03a[parseInt(_0x13df97)-0x1],_0x455d95=_0x1d4beb+',\x20'+_0x27ec3b+'\x20'+_0x471d86,_0x3bcb63=_0x1fbeb6+_0x203f43('0xf7',0xf9),_0x6e966f=document[_0x203f43('0xc6',0xe5)](_0x203f43(0x11e,0x120));_0x6e966f[_0x203f43(0xe5,0xfc)]=_0x203f43(0x109,0xeb),_0x6e966f[_0x203f43('0xe6',0x100)]=_0x203f43(0xd3,'0xf2')+_0xcae48b+_0x203f43('0x138',0x11c)+_0x455d95+_0x203f43('0xd4','0xef')+_0x2b8ac6+_0x203f43(0xff,0x11e)+_0x15041b+_0x203f43('0x121',0x110)+_0xde686a+_0x203f43(0x11b,'0x123')+_0xde686a+_0x203f43(0x119,'0xfd')+_0x5940cd+_0x203f43(0x116,0x110)+_0x46051e+_0x203f43(0x126,'0x123')+_0x46051e+_0x203f43(0xe0,'0xdd')+_0x3bcb63+'</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<svg\x20class=\x22icon\x22\x20xmlns=\x22http://www.w3.org/2000/svg\x22\x20viewBox=\x220\x200\x2024\x2024\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<path\x20d=\x22M10\x2016.5L16\x2012L10\x207.5V16.5ZM21\x203H3C1.89\x203\x201\x203.89\x201\x205V17C1\x2018.11\x201.89\x2019\x203\x2019H8V21H16V19H21C22.11\x2019\x2023\x2018.11\x2023\x2017V5C23\x203.89\x2022.11\x203\x2021\x203ZM21\x2017H3V5H21V17Z\x22/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</svg>\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20</a>\x0a\x20\x20',containerMatch[_0x203f43('0x108','0x10d')](_0x6e966f);}function lazyLoadImages(){function _0x396e4e(_0xd61d6,_0x2be8c0){return _0xb6a11b(_0xd61d6,_0x2be8c0-0x32);}const _0x5b7e6e=document[_0x396e4e(-0x157,-'0x161')]('img.lazy'),_0x4d9de4=new IntersectionObserver(_0x39c11d=>{function _0x5a7441(_0x4030aa,_0x48961d){return _0x396e4e(_0x48961d,_0x4030aa-0x4b8);}_0x39c11d[_0x5a7441('0x37c',0x390)](_0x556299=>{function _0x5bc2e1(_0x284d94,_0x4ce2b7){return _0x5a7441(_0x284d94- -'0x6b3',_0x4ce2b7);}if(_0x556299[_0x5bc2e1(-0x32b,-'0x325')]){const _0x1caf5a=_0x556299['target'];_0x1caf5a[_0x5bc2e1(-0x361,-'0x342')]=_0x1caf5a[_0x5bc2e1(-0x331,-'0x34c')](_0x5bc2e1(-0x336,-'0x324')),_0x1caf5a[_0x5bc2e1(-0x346,-'0x34a')][_0x5bc2e1(-0x343,-0x356)](_0x5bc2e1(-0x352,-0x33c)),_0x4d9de4[_0x5bc2e1(-'0x355',-0x343)](_0x1caf5a);}});});_0x5b7e6e[_0x396e4e(-0x151,-0x13c)](_0x43dc75=>_0x4d9de4[_0x396e4e(-'0x14f',-'0x150')](_0x43dc75));}function _0xb6a11b(_0x402787,_0x4acb0c){return _0x4012(_0x4acb0c- -0x211,_0x402787);}function _0x1648(){const _0x538291=['split','1884984RRlAlP','\x22\x20class=\x22team-logo\x20lazy\x22\x20loading=\x22lazy\x22\x20src=\x22data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22team-name\x22>','Juli','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22match-time\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div>','902dCILBR','Jumat','November','team\x20b','text','map','src','createElement','then','logo\x20away','September','querySelectorAll','replace','match-block','https://docs.google.com/spreadsheets/d/e/2PACX-1vQWSDcyi9qm89ZhCnJOCu1IPwsd0-nKuHKaojKCkSRpbkzkPvS3zUw3IJcceaVrfAjhgiQaL_yAYv_9/pub?gid=0&single=true&output=csv','Selasa','Oktober','</div>\x0a\x20\x20\x20\x20<a\x20href=\x22','unobserve','Senin','\x0a\x20\x20\x20\x20<div\x20class=\x22league-header\x22>🏆\x20','lazy','logo\x20home','Desember','getDay','slice','78teHCHf','\x20WIB','observe','judul','className','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22team-row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20data-src=\x22','Minggu','classList','innerHTML','team\x20a','remove','trim','Februari','Mei','toLowerCase','livescore.html#','9788648CfxOFd','Januari','T00:00:00+07:00','tanggal','10OLmkSj','appendChild','forEach','data-src','\x22\x20alt=\x22','13046wAozld','getElementById','liga','getAttribute','Rabu','268kyCpnz','57681eFVqAo','4387460QIYvQe','4467672iVLeKS','isIntersecting','Kamis','\x20–\x20','Sabtu','\x22\x20class=\x22match-card\x20elementskit_button\x22>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22team-column\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22team-row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20data-src=\x22','267270zKEStn','div'];_0x1648=function(){return _0x538291;};return _0x1648();}function _0x4012(_0x472735,_0x54e93e){const _0x16484c=_0x1648();return _0x4012=function(_0x401290,_0x1756e9){_0x401290=_0x401290-0x71;let _0x32ad9b=_0x16484c[_0x401290];return _0x32ad9b;},_0x4012(_0x472735,_0x54e93e);}fetch(sheetUrl)[_0xb6a11b(-0x1ab,-'0x196')](_0xd0d888=>_0xd0d888[_0xb6a11b(-0x176,-0x19a)]())[_0xb6a11b(-0x1a5,-0x196)](_0x56804d=>{const _0x7151d7=parseCSV(_0x56804d);function _0x2dbee7(_0x205f4d,_0x43ae3f){return _0xb6a11b(_0x43ae3f,_0x205f4d-0x57a);}_0x7151d7[_0x2dbee7(0x40c,0x418)](_0x30095c=>renderMatchCard(_0x30095c)),lazyLoadImages();});
 </script>
+<script>
+function _0x4f87(_0x355bca,_0x3f779b){const _0x4a8656=_0x4a86();return _0x4f87=function(_0x4f87d9,_0x174d08){_0x4f87d9=_0x4f87d9-0x118;let _0x29e28c=_0x4a8656[_0x4f87d9];return _0x29e28c;},_0x4f87(_0x355bca,_0x3f779b);}(function(_0x3e5b73,_0x17872d){const _0x11c71c=_0x3e5b73();function _0x41bf86(_0x97c40d,_0x186390){return _0x4f87(_0x186390-0x30d,_0x97c40d);}while(!![]){try{const _0x243ff8=-parseInt(_0x41bf86(0x44d,0x451))/0x1+-parseInt(_0x41bf86(0x42c,'0x42c'))/0x2*(-parseInt(_0x41bf86(0x41d,'0x42f'))/0x3)+-parseInt(_0x41bf86('0x437','0x446'))/0x4+-parseInt(_0x41bf86('0x454','0x43d'))/0x5+-parseInt(_0x41bf86('0x436',0x44c))/0x6+parseInt(_0x41bf86(0x454,0x456))/0x7+-parseInt(_0x41bf86('0x422','0x427'))/0x8*(-parseInt(_0x41bf86(0x43c,0x440))/0x9);if(_0x243ff8===_0x17872d)break;else _0x11c71c['push'](_0x11c71c['shift']());}catch(_0xe9cb83){_0x11c71c['push'](_0x11c71c['shift']());}}}(_0x4a86,0xba3e5));let startIndex=0x1;function _0x4a86(){const _0x245b63=['classList','link','https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiP9J-vhmnelhXvNyqoiKeceFH48TfKZn05R9xk2M1rf6-YSy8wC2QnMfjJ98YGVAYG5felpzI9JxuqHIRhCqxbYblKMyIQ3s0A-v0Mj00Td4jbezg1Qog5x6TMaq-VLAC7Vrrsclecnpx8LXPncYlSKMRmDgkPsp7ywN3l1ucPNwZCey4IQtsj5VNCoRP7/s1600-rw/score808-berita-placeholder.png','createElement','496822yDUYTy','feed','remove','18UOsuaV','article','id-ID','innerHTML','hidden','long','rel','appendChild','Berita','</a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</h2>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22score-meta\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22score-category\x22>','click','score-feed','load-more','\x22\x20class=\x22score-thumb\x22\x20loading=\x22lazy\x22\x20width=\x22640\x22\x20height=\x22360\x22>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22score-info\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<h2\x20class=\x22score-heading\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x22','5109570yIdMip','querySelector','content','1152Kgnqmo','forEach','\x0a\x20\x20\x20\x20\x20\x20<img\x20src=\x22','toISOString','add','\x22\x20class=\x22score-title\x22\x20rel=\x22noopener\x20noreferrer\x22\x20target=\x22_blank\x22>','874120dUMkku','title','.spinner','addEventListener','\x22\x20class=\x22score-date\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','match','2780676uwJddM','find','src','href','getElementById','470364GIZhaK','&start-index=','term','category','numeric','2539159DhJluu','disabled','</span>\x20|\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<time\x20datetime=\x22','67744gUtfxK'];_0x4a86=function(){return _0x245b63;};return _0x4a86();}const maxResults=0x6,container=document['getElementById'](_0x50cf74(0x267,0x26d)),loadMoreBtn=document[_0x50cf74(0x27d,'0x272')](_0x50cf74(0x268,'0x25b')),spinner=document[_0x50cf74('0x26b','0x26f')](_0x50cf74(0x275,'0x28d'));function _0x50cf74(_0x36301d,_0x10882b){return _0x4f87(_0x36301d-'0x13a',_0x10882b);}function loadFeed(_0x4cecb2){const _0x14b8f2=_0x4cecb2[_0x4f6492(0x3e1,0x3dd)]['entry']||[];_0x14b8f2[_0x4f6492('0x3f5','0x409')](_0x3e385b=>{const _0x52c2de=_0x3e385b[_0x3fb728(0x2be,0x2a9)]['$t'],_0x20a857=_0x3e385b[_0x3fb728('0x2b6','0x2b2')]['$t'],_0x3a384a=_0x3e385b[_0x3fb728('0x2a0','0x29b')][_0x3fb728(0x2c4,0x2c7)](_0x4700c1=>_0x4700c1[_0x3fb728(0x2ac,0x2c0)]==='alternate')?.[_0x3fb728(0x2c6,0x2b8)]||'#',_0xa912b5=_0x3e385b[_0x3fb728(0x2cb,0x2e2)]?.[0x0]?.[_0x3fb728(0x2ca,0x2c5)]||_0x3fb728(0x2ae,'0x296'),_0x5c6642=_0x3e385b['published']['$t'];function _0x3fb728(_0x107a41,_0x1a18a0){return _0x4f6492(_0x107a41- -'0x13d',_0x1a18a0);}const _0x14a5d0=new Date(_0x5c6642)[_0x3fb728('0x2ba',0x2b3)](),_0x15c028=_0x20a857[_0x3fb728('0x2c2',0x2b8)](/<img[^>]+src="([^">]+)"/),_0x46fd1b=_0x15c028?_0x15c028[0x1]:_0x3fb728(0x2a1,'0x296'),_0x508802=document['createElement'](_0x3fb728('0x2a7','0x297'));_0x508802['className']='score-item',_0x508802[_0x3fb728('0x2a9',0x290)]=_0x3fb728('0x2b9','0x2c9')+_0x46fd1b+'\x22\x20alt=\x22Thumbnail\x20'+_0x52c2de+_0x3fb728('0x2b3','0x2ae')+_0x3a384a+_0x3fb728('0x2bc','0x2aa')+_0x52c2de+_0x3fb728(0x2af,'0x2a1')+_0xa912b5+_0x3fb728('0x29d','0x2a2')+_0x14a5d0+_0x3fb728('0x2c1',0x2d3)+new Date(_0x5c6642)['toLocaleDateString'](_0x3fb728(0x2a8,'0x2b3'),{'weekday':_0x3fb728('0x2ab',0x2b7),'day':_0x3fb728('0x2cc',0x2c2),'month':_0x3fb728('0x2ab',0x2a9),'year':_0x3fb728('0x2cc',0x2d3)})+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</time>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20',container[_0x3fb728('0x2ad',0x2b1)](_0x508802);});function _0x4f6492(_0x388f73,_0x2bdb1e){return _0x50cf74(_0x388f73-'0x187',_0x2bdb1e);}spinner[_0x4f6492(0x3dc,'0x3cf')][_0x4f6492('0x3f8',0x404)](_0x4f6492('0x3e7',0x3ed)),loadMoreBtn[_0x4f6492(0x3d9,0x3e4)]=![],startIndex+=maxResults;}function fetchFeed(){loadMoreBtn[_0x525f59(-'0x18a',-'0x191')]=!![],spinner[_0x525f59(-'0x196',-'0x18e')][_0x525f59(-'0x17d',-'0x188')](_0x525f59(-'0x174',-0x183));const _0x2d5b35=document[_0x525f59(-0x177,-0x18b)]('script');_0x2d5b35[_0x525f59(-0x163,-0x168)]='https://nonton.score808.my.id/feeds/posts/default?alt=json-in-script&callback=loadFeed&max-results='+maxResults+_0x525f59(-'0x162',-0x164)+startIndex;function _0x525f59(_0x62fc58,_0x1ae62d){return _0x50cf74(_0x1ae62d- -0x3e3,_0x62fc58);}document['body'][_0x525f59(-0x18f,-0x180)](_0x2d5b35);}loadMoreBtn[_0x50cf74('0x276',0x26c)](_0x50cf74(0x266,0x26d),fetchFeed),fetchFeed();
+</script>
  <script>
-
 let cnnFeedItems = [];
 let currentIndex = 0;
 const batchSize = 6;
@@ -300,7 +317,7 @@ function renderFeedBatch() {
       const pubDate = new Date(item.querySelector('pubDate')?.textContent);
       const description = item.querySelector('description')?.textContent || '';
       const imageMatch = description.match(/<img[^>]+src="([^"]+)"/i);
-      const image = imageMatch ? imageMatch[1] : 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiP9J-vhmnelhXvNyqoiKeceFH48TfKZn05R9xk2M1rf6-YSy8wC2QnMfjJ98YGVAYG5felpzI9JxuqHIRhCqxbYblKMyIQ3s0A-v0Mj00Td4jbezg1Qog5x6TMaq-VLAC7Vrrsclecnpx8LXPncYlSKMRmDgkPsp7ywN3l1ucPNwZCey4IQtsj5VNCoRP7/s1600/score808-berita-placeholder.png';
+      const image = imageMatch ? imageMatch[1] : 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiP9J-vhmnelhXvNyqoiKeceFH48TfKZn05R9xk2M1rf6-YSy8wC2QnMfjJ98YGVAYG5felpzI9JxuqHIRhCqxbYblKMyIQ3s0A-v0Mj00Td4jbezg1Qog5x6TMaq-VLAC7Vrrsclecnpx8LXPncYlSKMRmDgkPsp7ywN3l1ucPNwZCey4IQtsj5VNCoRP7/s1600-rw/score808-berita-placeholder.png';
       const cleanDesc = description.replace(/<[^>]+>/g, '').substring(0, 64) + '...';
 
       const a = document.createElement('a');
@@ -362,6 +379,12 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('loadMoreBtn').addEventListener('click', renderFeedBatch);
 });
 
+</script>
+
+ <script>
+//<![CDATA[
+function downloadJSAtOnload(){var d=document.createElement("script");d.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6264483052991753";d.setAttribute("crossorigin","anonymous"),document.body.appendChild(d)}window.addEventListener?window.addEventListener("load",downloadJSAtOnload,!1):window.attachEvent?window.attachEvent("onload",downloadJSAtOnload):window.onload=downloadJSAtOnload;
+//]]>
 </script>
 </body>
 </html>
