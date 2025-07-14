@@ -380,7 +380,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 </script>
-
+<script async type="application/javascript"
+        src="https://news.google.com/swg/js/v1/swg-basic.js"></script>
+<script>
+  (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
+    basicSubscriptions.init({
+      type: "NewsArticle",
+      isPartOfType: ["Product"],
+      isPartOfProductId: "CAow45S0DA:openaccess",
+      clientOptions: { theme: "light", lang: "id" },
+    });
+  });
+</script>
 <!-- <script>
 //<![CDATA[
 function downloadJSAtOnload(){var d=document.createElement("script");d.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6264483052991753";d.setAttribute("crossorigin","anonymous"),document.body.appendChild(d)}window.addEventListener?window.addEventListener("load",downloadJSAtOnload,!1):window.attachEvent?window.attachEvent("onload",downloadJSAtOnload):window.onload=downloadJSAtOnload;
