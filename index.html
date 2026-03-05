@@ -46,45 +46,71 @@
 <!-- Structured Data -->
 <script type="application/ld+json">
 {
- "@context":"https://schema.org",
- "@graph":[
+ "@context": "https://schema.org",
+ "@graph": [
+
   {
-   "@type":"WebSite",
-   "name":"Score808",
-   "url":"https://www.score808.my.id/",
-   "potentialAction":{
-     "@type":"SearchAction",
-     "target":"https://www.score808.my.id/search?q={search_term_string}",
-     "query-input":"required name=search_term_string"
+   "@type": "WebSite",
+   "@id": "https://www.score808.my.id/#website",
+   "name": "Score808",
+   "url": "https://www.score808.my.id/",
+   "description": "Score808 live football scores, match schedules, results and latest football news.",
+   "publisher": {
+     "@id": "https://www.score808.my.id/#organization"
+   },
+   "potentialAction": {
+     "@type": "SearchAction",
+     "target": "https://www.score808.my.id/search?q={search_term_string}",
+     "query-input": "required name=search_term_string"
    }
   },
+
   {
-   "@type":"Organization",
-   "name":"Score808",
-   "url":"https://www.score808.my.id/",
-   "logo":{
-     "@type":"ImageObject",
-     "url":"https://cdn.jsdelivr.net/gh/kebutuhanpublik/kebutuhanpublik.github.io@main/favicon.ico"
+   "@type": "Organization",
+   "@id": "https://www.score808.my.id/#organization",
+   "name": "Score808",
+   "url": "https://www.score808.my.id/",
+   "logo": {
+     "@type": "ImageObject",
+     "url": "https://cdn.jsdelivr.net/gh/kebutuhanpublik/kebutuhanpublik.github.io@main/favicon.ico"
    },
-   "sameAs":[
+   "sameAs": [
      "https://www.facebook.com/profile.php?id=61574589075880",
      "https://twitter.com/Livescore808",
      "https://www.youtube.com/@808footballnews"
    ]
+  },
+
+  {
+   "@type": "SportsOrganization",
+   "name": "Score808 Football Updates",
+   "url": "https://www.score808.my.id/",
+   "sport": "Soccer"
+  },
+
+  {
+   "@type": "NewsMediaOrganization",
+   "name": "Score808 News",
+   "url": "https://www.score808.my.id/",
+   "logo": {
+     "@type": "ImageObject",
+     "url": "https://cdn.jsdelivr.net/gh/kebutuhanpublik/kebutuhanpublik.github.io@main/favicon.ico"
+   }
+  },
+
+  {
+   "@type": "WebPage",
+   "name": "Score808 Live Scores and Football Match Schedule",
+   "url": "https://www.score808.my.id/",
+   "description": "Live football scores, match schedules, standings and latest football news from international leagues.",
+   "isPartOf": {
+     "@id": "https://www.score808.my.id/#website"
+   }
   }
+
  ]
 }
 </script>
- {
- "@type":"SportsOrganization",
- "name":"Score808",
- "url":"https://www.score808.my.id/",
- "sport":"Soccer",
- "sameAs":[
-   "https://twitter.com/Livescore808",
-   "https://www.youtube.com/@808footballnews"
- ]
-}
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
   <!-- Style Kustom Anda -->
   <style amp-custom>
