@@ -85,8 +85,8 @@ img[src^="https://um.simpli.fi/"],img[src^="https://i.liadm.com/"]{display:none}
   <div class='container'>
     <div class='logo'>Score808<span>.my.id</span></div>
     <nav class='main-nav' id='main-nav'>
-      <a class='active' href='https://nonton.score808.my.id/'>Jadwal Live Bola</a>
-      <a href='https://nonton.score808.my.id/'>Live Streaming</a>
+      <a class='active' href='https://www.score808.my.id/'>Jadwal Live Bola</a>
+      <a href='https://www.score808.my.id/'>Live Streaming</a>
     </nav>
     <div class='icons'>
       <button class='icon-btn' id='menu-toggle'>&#9776;</button>
@@ -99,10 +99,10 @@ img[src^="https://um.simpli.fi/"],img[src^="https://i.liadm.com/"]{display:none}
 <div class='adsMobileWidget'>
 <div class='adsIconMobile'>
 
-<span>Join Telegram Channel to Update Football Live!</span>
+<span>Join Whatsapp Score808 to Update Football Live!</span>
 </div>
 <div class='adsBtnMobile'>
-<button class='btnMobile'><a target="_blank" rel="noopener noreferrer" href='https://t.me/score808alternative'>
+<button class='btnMobile'><a target="_blank" rel="noopener noreferrer" href='https://www.whatsapp.com/channel/0029VbC7N00EQIaqwkJiAv0Y'>
 JOIN
 </a>
 </button>
@@ -127,17 +127,19 @@ JOIN
 </div>
 <div class='tab-content' id='live' style='display: none;'>
   <!-- Konten Live -->
-  <div class='search'> <input id='searchInput' placeholder='Cari tim, liga, atau tanggal...' type='text'/></div>
-<div id="jadwal-pertandingan"></div>
+ <!-- <div class='search'> <input id='searchInput' placeholder='Cari tim, liga, atau tanggal...' type='text'/></div>
+<div id="jadwal-pertandingan"></div>-->
+   <iframe id='score808frame2' title='highlights' scrolling='no' src='https://official.tigoals.my.id/p/highlights-score808.html' style='width: 100%; border: none;'></iframe>
+
 </div>
  </main>
 <div id="jadwal-pertandingan"></div>
  <div id="liveStreamContainer">
-  <a href="https://www.youtube.com/@808footballnews" id="liveStreamBtn" target="_blank" rel="noopener noreferrer">
+  <a href="https://www.youtube.com/@CandilRiyadi/streams" id="liveStreamBtn" target="_blank" rel="noopener noreferrer">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <path d="M10 8.64v6.72L15.27 12 10 8.64M8 5v14l11-7L8 5z"/>
     </svg>
-    Subscribe
+    Live Youtube
   </a>
   <button id="closeBtn">✕</button>
 </div>
@@ -148,6 +150,13 @@ function _0x991410(_0x448dfd,_0x511597){return _0x1618(_0x448dfd-'0x374',_0x5115
 window.addEventListener("message", function(e) {
     if (e.origin !== "https://official.tigoals.my.id") return;
     const iframe = document.getElementById("score808frame");
+    if (e.data && e.data.height) {
+      iframe.style.height = e.data.height + "px";
+    }
+  });
+    window.addEventListener("message", function(e) {
+    if (e.origin !== "https://official.tigoals.my.id") return;
+    const iframe = document.getElementById("score808frame2");
     if (e.data && e.data.height) {
       iframe.style.height = e.data.height + "px";
     }
